@@ -13,7 +13,10 @@ html{
 
 a{
     color: white;
+    display: flex;
+    justify-content: center;
     text-decoration: none;
+    width: 100%;
 }
 
 .container{

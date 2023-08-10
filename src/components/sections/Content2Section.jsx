@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { PurpleBtn } from '../buttons/PurpleBtn';
 import { LightBtn } from '../buttons/LightBtn';
 import { whatsapp } from '../../assets/infos';
 
@@ -12,7 +11,7 @@ const Content2SectionStyled = styled.section`
     .img{
         align-items: center;
         .normalImg{
-            border-radius: ${props => props.border};
+            border-radius: ${props => props.borderImg};
             width: 380px;
         }
     }
@@ -57,9 +56,9 @@ const Content2SectionStyled = styled.section`
     }
 `
 
-export function Content2Section({ id, content, border }){
+export function Content2Section({ id, content, borderImg }){
     return(
-        <Content2SectionStyled id={id} className='container' border={border}>
+        <Content2SectionStyled id={id} className='container' borderImg={borderImg}>
             <div className='img flexR'>
                 <img src={content.img} className='normalImg' />
             </div>

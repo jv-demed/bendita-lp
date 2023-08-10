@@ -1,44 +1,41 @@
 import styled from 'styled-components';
 import { PurpleBtn } from '../buttons/PurpleBtn';
-import { whatsapp } from '../../assets/infos';
 
-const Content1SectionStyled = styled.section`
+const WelcomeSectionStyled = styled.section`
     background-color: #f7e9f8;
     display: flex;
     gap: 10px;
     height: 90vh;
-    width: 100%;
     .content{
         align-items: center;
-        gap: 20px;
+        color: #39163e;
+        gap: 30px;
         justify-content: center;
         width: 100%;
         h2{
             font-size: 2.2rem;
+            text-align: center;
         }
         span{
             font-size: 1.2rem;
+            text-align: center;
         }
     }
     .img{
         align-items: center;
-        .normalImg{
-            border-radius: ${props => props.borderImg};
+        img{
+            border-radius: ${props => props.$border};
             width: 380px;
         }
     }
     @media(max-width: 850px){
-        .img{
-            .normalImg{
-                width: 300px;
-            }
+        img{
+            width: 300px;
         }
     }
     @media(max-width: 750px){
-        .img{
-            .normalImg{
-                width: 250px;
-            }
+        img{
+            width: 250px;
         }
     }
     @media(max-width: 650px){
@@ -46,29 +43,30 @@ const Content1SectionStyled = styled.section`
         flex-direction: column-reverse;
         gap: 30px;
         height: auto;
-        .img{
-            .normalImg{
-                width: 100%;
-            }
+        img{
+            width: 100%;
         }
     }
 `
 
-export function Content1Section({ id, content, borderImg }){
+export function WelcomeSection({ content }){
     return(
-        <Content1SectionStyled id={id} className='container' borderImg={borderImg}>
+        <WelcomeSectionStyled className='container' $border={content.borderImg}>
             <div className='content flexC'>
                 <h2>{content.title}</h2>
-                <span>{content.txt}</span>
-                <a href={`${whatsapp.link}${whatsapp.number}`} target='_blank'>
+                <span>{content.text}</span>
+                <a href={content.link}>
                     <PurpleBtn>
-                        Saiba mais
+                        {content.textBtn}
                     </PurpleBtn>
                 </a>
             </div>
             <div className='img flexR'>
-                <img src={content.img.img} className='normalImg' />
+                <img
+                    src={content.img.img} 
+                    alt={content.img.alt}
+                />
             </div>
-        </Content1SectionStyled>
+        </WelcomeSectionStyled>
     )
 }

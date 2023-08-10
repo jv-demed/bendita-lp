@@ -49,7 +49,10 @@ export function HomeSection(){
     return(
         <HomeSectionStyled className='container'>
             <div className='infos flexC'>
-                <img src={logos.logoVert} className='logo' />
+                <img className='logo'
+                    src={logos.logoVert.img} 
+                    alt={logos.logoVert.alt}
+                />
                 <span>Conheça nossos principais procedimentos</span>
                 <div className='actions flexC'>
                     <LightBtn>
