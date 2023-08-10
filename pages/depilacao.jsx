@@ -1,6 +1,6 @@
 import { intro, welcome, benefits, equip, steps, faq } from '../src/assets/lps/content-depilacao';
-import { WhatsappBtn } from '../src/components/buttons/WhatsappBtn';
 import { Footer } from '../src/components/footer/Footer';
+import { WhatsappBtn } from '../src/components/buttons/WhatsappBtn';
 import { FaqSection } from '../src/components/sales-sections/FaqSection';
 import { EquipSection } from '../src/components/sales-sections/EquipSection';
 import { IntroSection } from '../src/components/sales-sections/IntroSection';

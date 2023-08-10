@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "@headlessui/react": "^1.7.16",
+    "babelrc": "^0.0.7",
     "next": "^13.4.12",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

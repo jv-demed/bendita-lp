@@ -23,7 +23,7 @@ const Content1SectionStyled = styled.section`
     .img{
         align-items: center;
         .normalImg{
-            border-radius: ${props => props.borderImg};
+            border-radius: ${props => props.$borderImg};
             width: 380px;
         }
     }
@@ -56,7 +56,7 @@ const Content1SectionStyled = styled.section`
 
 export function Content1Section({ id, content, borderImg }){
     return(
-        <Content1SectionStyled id={id} className='container' borderImg={borderImg}>
+        <Content1SectionStyled id={id} className='container' $borderImg={borderImg}>
             <div className='content flexC'>
                 <h2>{content.title}</h2>
                 <span>{content.txt}</span>
